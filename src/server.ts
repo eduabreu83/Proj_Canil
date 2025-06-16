@@ -16,7 +16,7 @@ server.engine('mustache', mustache());
 server.use(express.static(path.join(__dirname, '../public')));
 
 //Rotas
-server.use('/', mainRoutes);
+server.use(mainRoutes);
 
 server.use((req, res) => {
     res.send('404 - Not Found');
