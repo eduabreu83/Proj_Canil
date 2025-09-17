@@ -5,7 +5,7 @@ const createMenuObject_1 = require("../helpers/createMenuObject");
 const pet_1 = require("../models/pet");
 const home = (req, res) => {
     let list = pet_1.Pet.getAll();
-    res.render('pages/home', {
+    res.render('pages/page', {
         menu: (0, createMenuObject_1.createMenuObject)('all'),
         banner: {
             title: 'Todos os Animais',

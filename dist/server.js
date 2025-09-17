@@ -19,4 +19,7 @@ server.use(index_1.default);
 server.use((req, res) => {
     res.render('pages/404');
 });
-server.listen(process.env.PORT);
+const PORT = process.env.PORT || 8000;
+server.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
